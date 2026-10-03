@@ -15,7 +15,6 @@ import {
   Mail,
   Menu,
   MessageSquare,
-  MapPin,
   Network,
   Quote,
   Send,
@@ -27,76 +26,79 @@ import {
   Zap,
 } from 'lucide-react'
 
-const services = [
-  { icon: Code2, number: '01', title: 'Custom Application Development', text: 'Purpose-built products that turn complex ideas into dependable experiences your customers love.' },
-  { icon: Layers3, number: '02', title: 'Platform Modernization', text: 'Move legacy systems forward with thoughtful improvements, stronger foundations, and less operational drag.' },
-  { icon: Workflow, number: '03', title: 'Business Process Automation', text: 'Connect the right systems and automate repetitive work so your team can focus on meaningful progress.' },
-  { icon: Network, number: '04', title: 'Scalable System Architecture', text: 'Architecture designed for today’s needs and tomorrow’s growth — reliable, observable, and ready to scale.' },
-  { icon: ShieldCheck, number: '05', title: 'Technical Support & Maintenance', text: 'A steady technical partner to improve performance, resolve issues, and keep your product moving.' },
-  { icon: UsersRound, number: '06', title: 'Dedicated Development Teams', text: 'An experienced extension of your team, aligned to your goals, rituals, and roadmap.' },
-  { icon: Sparkles, number: '07', title: 'AI Agents & Intelligent Automation', text: 'Practical AI-powered workflows and assistants that help teams work faster, make better decisions, and scale their operations.' },
-  { icon: Network, number: '08', title: 'Blockchain & Distributed Systems', text: 'Secure, dependable foundations for decentralized products, digital assets, smart contracts, and trusted data flows.' },
+const navItems = [
+  ['Services', '#services'],
+  ['Work', '#work'],
+  ['Process', '#process'],
+  ['About', '#about'],
+  ['FAQ', '#faq'],
 ]
 
-const principles = [
-  '9+ years of backend engineering expertise',
-  'Experienced, dedicated development team',
-  'Flexible engagement models tailored to you',
-  'A focus on scalability, reliability, and performance',
-  'A partnership approach that grows with your business',
+const services = [
+  { icon: Code2, title: 'Custom software development', text: 'Tailored web apps, internal tools, dashboards, and business platforms built around the way your team actually works.', tags: ['Web apps', 'Dashboards', 'Platforms'] },
+  { icon: Layers3, title: 'Elegant website & UI design', text: 'Cool, premium, responsive interfaces that make your brand feel modern while keeping every action clear.', tags: ['UI/UX', 'Next.js', 'Design systems'] },
+  { icon: Network, title: 'Backend, APIs & integrations', text: 'Secure services, clean APIs, data flows, payments, third-party integrations, and automation that stay dependable.', tags: ['APIs', 'Data', 'Automation'] },
+  { icon: Gauge, title: 'Cloud, DevOps & performance', text: 'Deployment, monitoring, scaling, and optimization so your product feels fast and stable under real usage.', tags: ['Cloud', 'CI/CD', 'Performance'] },
+  { icon: Sparkles, title: 'AI agents & smart workflows', text: 'Practical AI assistants and workflow systems that help teams move faster without adding operational noise.', tags: ['AI agents', 'Chatbots', 'RAG'] },
+  { icon: ShieldCheck, title: 'Maintenance & support', text: 'Long-term technical care for updates, fixes, security, uptime, feature growth, and platform health.', tags: ['Support', 'Security', 'Reliability'] },
+]
+
+const stats = [
+  ['9+', 'years engineering production systems'],
+  ['30+', 'digital products and platforms'],
+  ['6', 'core software service areas'],
+  ['1', 'team from idea to support'],
 ]
 
 const process = [
-  { label: 'Discover', text: 'We listen, ask the right questions, and align on the outcome that matters most.', icon: MessageSquare },
-  { label: 'Design', text: 'We map a clear technical path and create a practical plan your team can trust.', icon: Layers3 },
-  { label: 'Build', text: 'We deliver in focused increments with clear communication and high engineering standards.', icon: Code2 },
-  { label: 'Support & Scale', text: 'We stay close, improve continuously, and help your systems grow confidently.', icon: Sparkles },
+  { icon: MessageSquare, title: 'Listen', text: 'We learn the business goal, audience, workflow, constraints, and what success should look like.' },
+  { icon: Workflow, title: 'Shape', text: 'We turn scattered ideas into a clean experience, practical architecture, and a focused delivery roadmap.' },
+  { icon: Code2, title: 'Craft', text: 'We design and build in visible increments with clean code, careful details, and direct communication.' },
+  { icon: Zap, title: 'Evolve', text: 'We launch, monitor, improve, and support the product so it keeps feeling reliable as your business grows.' },
 ]
 
-const models = [
-  { name: 'Project-Based', description: 'A focused team for a defined goal, timeline, and outcome.', best: 'Best for a clear product or feature', icon: Zap },
-  { name: 'Dedicated Team', description: 'A dependable engineering partner that integrates with your team.', best: 'Best for ongoing product development', icon: UsersRound, featured: true },
-  { name: 'Ongoing Support', description: 'Flexible expertise to keep systems healthy and momentum high.', best: 'Best for long-term technical partnership', icon: ShieldCheck },
+const work = [
+  { title: 'NostroMarkets', type: 'Trading platform', image: '/nostro.webp', text: 'A refined trading experience with real-time visibility, clear portfolio workflows, and secure product foundations.' },
+  { title: 'Brilliant Chair', type: 'E-commerce website', image: '/briliant.webp', text: 'A polished storefront that presents products beautifully and gives shoppers a smoother path from browse to purchase.' },
+  { title: 'Operations command center', type: 'Custom platform', image: 'https://images.pexels.com/photos/34069/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940', text: 'A business dashboard concept for seeing performance, spotting risks, and taking action from one elegant workspace.' },
 ]
 
 const industries = [
-  ['SaaS', BarChart3], ['Fintech', Gauge], ['E-commerce', Layers3], ['Healthcare', ShieldCheck], ['Logistics', Network], ['Startups', Sparkles],
-]
-
-const capabilities = [
-  { title: 'Backend & APIs', text: 'Reliable services, clean APIs, and data flows built for real product usage.', icon: Code2 },
-  { title: 'Frontend Experiences', text: 'Clear, responsive interfaces that make complex workflows feel simple.', icon: Layers3 },
-  { title: 'Cloud & DevOps', text: 'Delivery foundations that keep releases predictable, observable, and secure.', icon: Gauge },
-  { title: 'Data & Integrations', text: 'Connected systems that turn scattered information into useful action.', icon: Network },
-  { title: 'Performance & Reliability', text: 'Practical improvements that make products faster, steadier, and easier to operate.', icon: Zap },
-  { title: 'Modernization Strategy', text: 'A measured path from legacy constraints to a healthier technical foundation.', icon: Sparkles },
+  ['SaaS', BarChart3],
+  ['Fintech', Gauge],
+  ['E-commerce', Layers3],
+  ['Healthcare', ShieldCheck],
+  ['Logistics', Network],
+  ['Startups', Sparkles],
 ]
 
 const faqs = [
-  { question: 'What type of software projects do you take on?', answer: 'We help with new product builds, platform improvements, backend systems, automation, integrations, and ongoing engineering support. We are especially useful when reliability and scalability matter.' },
-  { question: 'Can you work with our existing engineering team?', answer: 'Yes. Our dedicated team model is designed to fit into your existing rituals, tools, and roadmap while bringing additional senior engineering capacity.' },
-  { question: 'How do you start a new engagement?', answer: 'We begin with a focused conversation about your goals, constraints, and current system. From there, we recommend the right scope, team shape, and first milestone.' },
-  { question: 'Do you support projects after launch?', answer: 'Yes. Ongoing support can include monitoring, performance improvements, maintenance, feature delivery, and technical guidance as your product grows.' },
-  { question: 'How do you approach security and reliability?', answer: 'We build security, observability, testing, and failure handling into the engineering process from the beginning instead of treating them as late-stage add-ons.' },
+  { question: 'Can you make our website look more premium?', answer: 'Yes. We redesign structure, visuals, spacing, copy, responsiveness, and conversion flow so the site feels elegant, modern, and trustworthy.' },
+  { question: 'Do you build full software products too?', answer: 'Yes. We build websites, dashboards, portals, APIs, internal tools, automation workflows, AI assistants, and scalable custom platforms.' },
+  { question: 'Can you work with our existing system?', answer: 'Yes. We can improve, modernize, integrate, or extend existing software without forcing a full rebuild unless the current foundation requires it.' },
+  { question: 'Do you support after launch?', answer: 'Yes. We can continue with maintenance, monitoring, security updates, feature delivery, performance improvement, and technical support.' },
 ]
 
-const progressStages = [
-  { step: '01', title: 'Plan with purpose', text: 'We turn goals and open questions into a clear product and technical direction.', image: 'https://static.prod-images.emergentagent.com/jobs/8a50999c-f930-4eea-bf04-d111b33cb9b3/images/d19b917bae5c0d45e1a5614b35717ce9cd16ebb35c2cea5e6de94bafc95f446d.jpeg', alt: 'Abstract software architecture planning visualization with connected system nodes' },
-  { step: '02', title: 'Build in focused steps', text: 'We make progress visible with small releases, thoughtful code, and regular feedback.', image: 'https://static.prod-images.emergentagent.com/jobs/8a50999c-f930-4eea-bf04-d111b33cb9b3/images/04036b9ff04621eb21d8b4f318aede9f15311d86c6f216ce3bf77d2d92644aa3.jpeg', alt: 'Abstract software build visualization with code and connected product modules' },
-  { step: '03', title: 'Release with confidence', text: 'We monitor, improve, and support the product so it gets stronger after launch.', image: 'https://static.prod-images.emergentagent.com/jobs/8a50999c-f930-4eea-bf04-d111b33cb9b3/images/8e4dfd93a9c013758d61edf0b903026bbf6181d704819b316662a1b20d43722c.jpeg', alt: 'Abstract cloud deployment and observability visualization with uptime graph' },
-]
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+}
 
-const testimonials = [
-  { quote: 'NathSphere brought the clarity and engineering discipline we needed to move from an idea to a reliable product.', name: 'Product Leader', role: 'Growing SaaS company' },
-  { quote: 'The team feels like a true extension of ours. They communicate clearly, own outcomes, and consistently deliver.', name: 'Technology Director', role: 'Digital services business' },
-  { quote: 'We finally have an architecture that can support our next stage of growth without slowing the team down.', name: 'Founder', role: 'Early-stage startup' },
-]
+function SectionLabel({ children, light = false }) {
+  return (
+    <p className={`mb-4 text-xs font-black uppercase tracking-[0.24em] ${light ? 'text-cyan-200' : 'text-indigo-600'}`}>
+      {children}
+    </p>
+  )
+}
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState(0)
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' })
   const [formState, setFormState] = useState({ status: 'idle', message: '' })
+
+  const closeMenu = () => setMenuOpen(false)
 
   const updateForm = (event) => {
     const { name, value } = event.target
@@ -116,145 +118,332 @@ function App() {
       const data = await response.json()
       if (!response.ok) throw new Error(data?.error || 'Something went wrong.')
       setForm({ name: '', email: '', company: '', message: '' })
-      setFormState({ status: 'success', message: data.message })
+      setFormState({ status: 'success', message: data.message || 'Thanks. We will contact you soon.' })
     } catch (error) {
       setFormState({ status: 'error', message: error.message })
     }
   }
 
-  const closeMenu = () => setMenuOpen(false)
-
   return (
-    <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
-        <div className="container flex h-[116px] items-center justify-between">
+    <main className="min-h-screen overflow-hidden bg-[#f4f1ea] text-[#111827]">
+      <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3">
+        <div className="container flex h-16 items-center justify-between rounded-full border border-white/70 bg-white/70 px-4 shadow-[0_18px_60px_rgba(15,23,42,.10)] backdrop-blur-2xl">
           <a href="#top" className="flex items-center gap-3" onClick={closeMenu} aria-label="NathSphere Technolabs home">
-            <img src="/logo.png" alt="NathSphere Technolabs logo" className="h-[100px] w-[100px] rounded-2xl object-contain" />
+            <img src="/logo.png" alt="NathSphere Technolabs logo" className="h-11 w-11 rounded-full bg-white object-contain p-1 ring-1 ring-slate-200" />
+            <span className="hidden text-sm font-black tracking-[-0.03em] text-slate-950 sm:block">NathSphere</span>
           </a>
-          <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground lg:flex" aria-label="Main navigation">
-            <a href="#services" className="transition-colors hover:text-foreground">Services</a>
-            <a href="#projects" className="transition-colors hover:text-foreground">Projects</a>
-            <a href="#capabilities" className="transition-colors hover:text-foreground">Capabilities</a>
-            <a href="#approach" className="transition-colors hover:text-foreground">Our approach</a>
-            <a href="#about" className="transition-colors hover:text-foreground">About</a>
-            <a href="#contact" className="transition-colors hover:text-foreground">Contact</a>
+
+          <nav className="hidden items-center gap-7 text-sm font-bold text-slate-500 lg:flex" aria-label="Main navigation">
+            {navItems.map(([label, href]) => (
+              <a key={href} href={href} className="transition-colors hover:text-slate-950">{label}</a>
+            ))}
           </nav>
-          <a href="#contact" className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:bg-primary/90 sm:flex">Let&apos;s talk <ArrowRight className="h-4 w-4" /></a>
-          <button type="button" className="rounded-md p-2 text-foreground lg:hidden" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</button>
+
+          <a href="#contact" className="hidden items-center gap-2 rounded-full bg-slate-950 px-5 py-2.5 text-sm font-black text-white shadow-lg shadow-slate-950/15 transition-all hover:-translate-y-0.5 hover:bg-indigo-600 sm:flex">
+            Let's talk <ArrowRight className="h-4 w-4" />
+          </a>
+
+          <button type="button" className="rounded-full border border-slate-200 bg-white p-2 lg:hidden" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
-        {menuOpen && <nav className="container flex flex-col gap-5 border-t border-border/70 bg-background py-6 text-sm font-medium lg:hidden" aria-label="Mobile navigation"><a href="#services" onClick={closeMenu}>Services</a><a href="#projects" onClick={closeMenu}>Projects</a><a href="#capabilities" onClick={closeMenu}>Capabilities</a><a href="#approach" onClick={closeMenu}>Our approach</a><a href="#about" onClick={closeMenu}>About</a><a href="#faq" onClick={closeMenu}>FAQ</a><a href="#contact" onClick={closeMenu}>Contact</a></nav>}
+
+        {menuOpen && (
+          <nav className="container mt-2 flex flex-col gap-4 rounded-[28px] border border-white/70 bg-white/90 p-6 text-sm font-bold text-slate-700 shadow-2xl backdrop-blur-xl lg:hidden" aria-label="Mobile navigation">
+            {navItems.map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}</a>)}
+            <a href="#contact" onClick={closeMenu}>Contact</a>
+          </nav>
+        )}
       </header>
 
-      <section id="top" className="relative pt-[116px]">
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="container grid min-h-[680px] items-center gap-16 py-20 lg:grid-cols-[1.04fr_.96fr] lg:py-24">
-          <div className="relative z-10 max-w-2xl">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-2 text-xs font-semibold tracking-[0.08em] text-primary"><span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_0_4px_hsl(var(--primary)/.12)]" /> ENGINEERING PARTNERS FOR AMBITIOUS TEAMS</div>
-            <h1 className="max-w-3xl text-5xl font-bold leading-[1.05] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-[72px]">Build software that <span className="text-primary">scales</span> with your business<span className="text-primary">.</span></h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground">Reliable, scalable, high-performing solutions built by an experienced engineering team that cares about the details and your outcomes.</p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row"><a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/20 transition-all hover:-translate-y-1 hover:bg-primary/90">Book a free consultation <ArrowRight className="h-4 w-4" /></a><a href="#services" className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold transition-colors hover:bg-muted">Explore our services <ChevronDown className="h-4 w-4" /></a></div>
-            <div className="mt-12 flex items-center gap-4 text-sm text-muted-foreground"><div className="flex -space-x-2"><span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-primary text-xs font-bold text-primary-foreground">NS</span><span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-sky-200 text-xs font-bold text-sky-800">9+</span><span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-amber-100 text-xs font-bold text-amber-800">✓</span></div><span>Built on experience. Focused on what&apos;s next.</span></div>
-          </div>
-          <motion.div
-            className="relative mx-auto w-full max-w-[540px] lg:mx-0"
-            initial={{ opacity: 0, x: 44 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-          >
-            <motion.div
-              className="absolute -inset-8 rounded-[42px] bg-gradient-to-br from-cyan-400/20 via-primary/10 to-emerald-400/20 blur-3xl"
-              animate={{ opacity: [0.55, 0.95, 0.55], scale: [1, 1.05, 1] }}
-              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-            />
-            <motion.div
-              className="relative overflow-hidden rounded-[34px] border border-white/15 bg-[#071126] p-6 text-white shadow-2xl shadow-primary/25"
-              animate={{ y: [0, -7, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-              whileHover={{ scale: 1.015, boxShadow: '0 30px 90px rgba(15, 23, 42, 0.35)' }}
-            >
-              <motion.div
-                className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(34,211,238,.22),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(16,185,129,.16),transparent_30%)]"
-                animate={{ backgroundPosition: ['0% 0%', '20% 12%', '0% 0%'] }}
-                transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-              />
-              <div className="relative flex items-start justify-between gap-5">
-                <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Launch pipeline</p>
-                  <h2 className="mt-3 max-w-sm text-3xl font-bold leading-tight tracking-[-0.04em] text-white">Your product journey, moving forward.</h2>
-                  <p className="mt-3 max-w-sm text-sm leading-6 text-slate-300">A live-style view of strategy, build, quality, and release momentum.</p>
-                </motion.div>
-                <motion.span
-                  className="shrink-0 rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-[11px] font-bold text-emerald-200"
-                  animate={{ scale: [1, 1.08, 1], boxShadow: ['0 0 0 0 rgba(52,211,153,.22)', '0 0 0 8px rgba(52,211,153,0)', '0 0 0 0 rgba(52,211,153,0)'] }}
-                  transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                  Active
-                </motion.span>
-              </div>
-              <div className="relative mt-10">
-                <div className="absolute left-6 right-6 top-7 h-px bg-gradient-to-r from-cyan-300/20 via-cyan-300/60 to-emerald-300/20" />
-                <motion.div
-                  className="absolute left-6 top-[25px] h-1 w-1 rounded-full bg-cyan-200 shadow-[0_0_18px_rgba(34,211,238,.9)]"
-                  animate={{ x: [0, 440, 0] }}
-                  transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-                />
-                <div className="relative grid grid-cols-4 gap-3">
-                  {[
-                    ['01', 'Discover', MessageSquare],
-                    ['02', 'Design', Layers3],
-                    ['03', 'Develop', Code2],
-                    ['04', 'Deploy', Sparkles],
-                  ].map(([step, label, Icon], index) => <motion.div key={label} className="rounded-2xl border border-white/10 bg-white/[0.07] p-3 text-center backdrop-blur transition-colors hover:bg-white/[0.11]" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25 + index * 0.12 }} whileHover={{ y: -6 }}><motion.span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-300/10 text-cyan-200" animate={{ y: [0, -4, 0] }} transition={{ duration: 2.6, repeat: Infinity, delay: index * 0.25, ease: 'easeInOut' }}><Icon className="h-5 w-5" /></motion.span><p className="mt-4 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">{step}</p><p className="mt-1 text-sm font-bold text-white">{label}</p></motion.div>)}
+      <section id="top" className="relative min-h-screen pt-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_20%,rgba(129,140,248,.34),transparent_28%),radial-gradient(circle_at_84%_18%,rgba(45,212,191,.28),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(251,191,36,.18),transparent_34%)]" />
+        <div className="absolute left-1/2 top-28 h-[620px] w-[620px] -translate-x-1/2 rounded-full border border-white/50 bg-white/25 blur-3xl" />
+
+        <div className="container relative grid min-h-[calc(100vh-6rem)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr]">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.65 }} className="max-w-4xl">
+            <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/70 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-slate-700 shadow-sm backdrop-blur-xl">
+              <span className="h-2 w-2 rounded-full bg-indigo-500 shadow-[0_0_0_6px_rgba(99,102,241,.12)]" />
+              Elegant software service studio
+            </div>
+            <h1 className="max-w-4xl text-6xl font-black leading-[0.9] tracking-[-0.075em] text-slate-950 sm:text-7xl lg:text-[96px]">
+              Cool digital products, crafted with calm precision.
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+              NathSphere Technolabs designs and builds premium websites, custom software, APIs, dashboards, AI workflows, and scalable platforms with an elegant, modern service experience.
+            </p>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-950 px-7 py-4 text-sm font-black text-white shadow-2xl shadow-slate-950/20 transition-all hover:-translate-y-1 hover:bg-indigo-600">
+                Start your project <ArrowRight className="h-4 w-4" />
+              </a>
+              <a href="#work" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/60 px-7 py-4 text-sm font-black text-slate-900 shadow-sm backdrop-blur-xl transition-all hover:-translate-y-1 hover:bg-white">
+                See the style <ChevronDown className="h-4 w-4" />
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, scale: 0.96, y: 26 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="relative mx-auto w-full max-w-[560px]">
+            <div className="absolute -left-8 top-10 z-10 hidden rounded-[28px] border border-white/70 bg-white/70 p-5 shadow-2xl shadow-slate-900/10 backdrop-blur-2xl sm:block">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-slate-400">Studio score</p>
+              <p className="mt-2 text-4xl font-black tracking-[-0.08em] text-slate-950">96%</p>
+              <p className="mt-1 text-xs font-bold text-slate-500">Launch ready</p>
+            </div>
+
+            <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-white/55 p-4 shadow-[0_30px_100px_rgba(15,23,42,.16)] backdrop-blur-2xl">
+              <div className="rounded-[32px] bg-[#0c1222] p-5 text-white">
+                <div className="flex items-center justify-between border-b border-white/10 pb-5">
+                  <div>
+                    <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-200">NathSphere OS</p>
+                    <h2 className="mt-2 text-2xl font-black tracking-[-0.04em]">Service cockpit</h2>
+                  </div>
+                  <span className="rounded-full bg-emerald-300/10 px-3 py-1 text-xs font-black text-emerald-200">Elegant</span>
+                </div>
+
+                <div className="mt-6 grid gap-3">
+                  {['Brand website redesign', 'Custom platform build', 'API and automation layer'].map((item, index) => (
+                    <motion.div key={item} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.07] p-4" animate={{ x: [0, index === 1 ? 4 : -4, 0] }} transition={{ duration: 4.5 + index, repeat: Infinity, ease: 'easeInOut' }}>
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-300/10 text-sm font-black text-cyan-200">0{index + 1}</span>
+                        <span className="font-bold text-slate-100">{item}</span>
+                      </div>
+                      <Check className="h-5 w-5 text-emerald-200" />
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="mt-6 grid grid-cols-3 gap-3">
+                  {stats.slice(0, 3).map(([value, label]) => (
+                    <div key={value} className="rounded-2xl bg-white/[0.07] p-4 text-center">
+                      <p className="text-xl font-black text-white">{value}</p>
+                      <p className="mt-2 text-[10px] font-bold uppercase leading-4 tracking-[0.12em] text-slate-400">{label}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <motion.div className="relative mt-6 rounded-2xl border border-white/10 bg-white/[0.06] p-4" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.8 }}>
-                <div className="flex items-center justify-between text-xs font-semibold text-slate-300"><span>Release readiness</span><span className="text-emerald-200">94%</span></div>
-                <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
-                  <motion.span className="block h-full rounded-full bg-gradient-to-r from-cyan-300 via-sky-400 to-emerald-300" initial={{ width: 0 }} animate={{ width: '94%' }} transition={{ duration: 1.2, delay: 1, ease: 'easeOut' }} />
-                </div>
-              </motion.div>
-              <div className="relative mt-5 grid grid-cols-3 gap-3">
-                {[['Fast', 'Delivery'], ['99.9%', 'Reliability'], ['24/7', 'Support']].map(([value, label], index) => <motion.div key={label} className="rounded-2xl bg-white/[0.07] p-3 text-center" initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.45, delay: 1.1 + index * 0.1 }}><p className="text-lg font-bold text-white">{value}</p><p className="mt-1 text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400">{label}</p></motion.div>)}
-              </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <div className="border-y border-border bg-muted/35"><div className="container flex flex-wrap items-center justify-center gap-x-8 gap-y-3 py-5 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-muted-foreground sm:justify-between"><span>9+ Years Experience</span><span className="hidden h-1 w-1 rounded-full bg-primary sm:block" /><span>Dedicated Teams</span><span className="hidden h-1 w-1 rounded-full bg-primary sm:block" /><span>Flexible Engagement Models</span><span className="hidden h-1 w-1 rounded-full bg-primary sm:block" /><span>Scalable Architecture</span></div></div>
+      <section className="container -mt-4 pb-20">
+        <div className="grid gap-3 rounded-[32px] border border-white/70 bg-white/65 p-4 shadow-sm backdrop-blur-xl sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map(([value, label]) => (
+            <div key={value} className="rounded-3xl bg-white/70 p-6">
+              <p className="text-4xl font-black tracking-[-0.06em] text-slate-950">{value}</p>
+              <p className="mt-2 text-sm font-semibold leading-6 text-slate-500">{label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <section id="services" className="container py-24 sm:py-32"><div className="max-w-2xl"><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">What we do</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">Engineering that moves your business forward<span className="text-primary">.</span></h2><p className="mt-5 text-lg leading-8 text-muted-foreground">From your first technical decision to your next stage of growth, we bring senior engineering thinking to every part of the journey.</p></div><div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{services.map(({ icon: Icon, number, title, text }) => <article key={number} className="group rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"><div className="flex items-start justify-between"><span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><Icon className="h-5 w-5" /></span><span className="text-xs font-bold text-muted-foreground/50">{number}</span></div><h3 className="mt-7 text-lg font-bold tracking-[-0.02em]">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p><span className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-primary opacity-0 transition-opacity group-hover:opacity-100">Learn more <ArrowRight className="h-3.5 w-3.5" /></span></article>)}</div></section>
+      <section id="services" className="container py-20 sm:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <SectionLabel>Services</SectionLabel>
+          <h2 className="text-4xl font-black tracking-[-0.055em] text-slate-950 sm:text-6xl">Sophisticated software services for serious growth.</h2>
+          <p className="mt-6 text-lg leading-8 text-slate-600">A cleaner, cooler service presentation: premium visuals outside, reliable engineering inside.</p>
+        </div>
 
-      <section id="capabilities" className="border-y border-border bg-muted/30"><div className="container py-24 sm:py-32"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Technology capabilities</p><h2 className="max-w-2xl text-4xl font-bold tracking-[-0.04em] sm:text-5xl">The right depth for the work ahead<span className="text-primary">.</span></h2></div><p className="max-w-sm text-sm leading-6 text-muted-foreground">A practical engineering toolkit, shaped around your product instead of a one-size-fits-all stack.</p></div><div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{capabilities.map(({ title, text, icon: Icon }) => <article key={title} className="flex gap-4 rounded-2xl border border-border bg-card p-6"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><Icon className="h-5 w-5" /></span><div><h3 className="font-bold tracking-[-0.02em]">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p></div></article>)}</div></div></section>
+        <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {services.map(({ icon: Icon, title, text, tags }, index) => (
+            <motion.article key={title} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.5, delay: index * 0.04 }} className="group rounded-[34px] border border-white/70 bg-white/65 p-7 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-indigo-950/10">
+              <div className="flex items-center justify-between">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0c1222] text-cyan-200 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
+                  <Icon className="h-7 w-7" />
+                </div>
+                <span className="text-xs font-black uppercase tracking-[0.18em] text-slate-300">0{index + 1}</span>
+              </div>
+              <h3 className="mt-7 text-2xl font-black tracking-[-0.04em] text-slate-950">{title}</h3>
+              <p className="mt-4 leading-7 text-slate-600">{text}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {tags.map((tag) => <span key={tag} className="rounded-full bg-slate-950/[0.04] px-3 py-1 text-xs font-bold text-slate-600">{tag}</span>)}
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
 
-      <section id="approach" className="bg-[#101a39] text-white"><div className="container grid gap-16 py-24 sm:py-32 lg:grid-cols-[.85fr_1.15fr] lg:items-center"><div><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">Why NathSphere</p><h2 className="text-4xl font-bold leading-tight tracking-[-0.04em] sm:text-5xl">The confidence to build what&apos;s next<span className="text-cyan-300">.</span></h2><p className="mt-6 max-w-md text-base leading-7 text-slate-300">Good software is more than code. It&apos;s a clear path from business goals to an experience that works beautifully and keeps working.</p><a href="#contact" className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-cyan-300 transition-colors hover:text-white">Work with us <ArrowRight className="h-4 w-4" /></a></div><div className="grid gap-4 sm:grid-cols-2">{principles.map((principle, index) => <div key={principle} className="flex gap-4 rounded-2xl border border-white/10 bg-white/[.045] p-5"><span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-300"><Check className="h-3.5 w-3.5" /></span><div><span className="mb-1 block text-xs font-bold text-cyan-300/70">0{index + 1}</span><p className="text-sm font-medium leading-6 text-slate-200">{principle}</p></div></div>)}</div></div></section>
+      <section id="work" className="py-20 sm:py-28">
+        <div className="container">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div className="max-w-3xl">
+              <SectionLabel>Selected work</SectionLabel>
+              <h2 className="text-4xl font-black tracking-[-0.055em] text-slate-950 sm:text-6xl">Calm interfaces. Sharp business utility.</h2>
+            </div>
+            <p className="max-w-md leading-7 text-slate-600">A portfolio section designed like a premium studio: spacious cards, soft color, strong hierarchy, and refined movement.</p>
+          </div>
 
-      <section className="container py-24 sm:py-32"><div className="text-center"><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">A better way to build</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">From first conversation to lasting impact</h2></div><div className="relative mt-16 grid gap-10 md:grid-cols-4 md:gap-5">{process.map(({ label, text, icon: Icon }, index) => <div key={label} className="relative text-center md:text-left"><div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary md:mx-0"><Icon className="h-6 w-6" /></div><span className="mt-5 block text-xs font-bold uppercase tracking-[0.16em] text-primary">0{index + 1}</span><h3 className="mt-2 text-xl font-bold">{label}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>{index < process.length - 1 && <ArrowRight className="absolute right-0 top-6 hidden h-5 w-5 text-border md:block" />}</div>)}</div></section>
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {work.map((project) => (
+              <article key={project.title} className="group overflow-hidden rounded-[38px] border border-white/70 bg-white/65 p-3 shadow-sm backdrop-blur-xl transition-all hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-slate-950/10">
+                <div className="relative aspect-[16/11] overflow-hidden rounded-[30px] bg-slate-100">
+                  <img src={project.image} alt={`${project.title} project preview`} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                  <span className="absolute left-5 top-5 rounded-full border border-white/30 bg-white/80 px-3 py-1.5 text-xs font-black uppercase tracking-[0.14em] text-slate-900 backdrop-blur">{project.type}</span>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-2xl font-black tracking-[-0.04em] text-slate-950">{project.title}</h3>
+                  <p className="mt-4 leading-7 text-slate-600">{project.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <section id="progress" className="border-y border-border bg-muted/30"><div className="container py-24 sm:py-32"><div className="max-w-2xl"><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Progress you can see</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">A thoughtful path from idea to impact<span className="text-primary">.</span></h2><p className="mt-5 text-lg leading-8 text-muted-foreground">Our work stays visible at every stage, so you always know what is happening, what is next, and where your product is headed.</p></div><div className="mt-14 grid gap-5 lg:grid-cols-3">{progressStages.map(({ step, title, text, image, alt }) => <article key={step} className="group overflow-hidden rounded-2xl border border-border bg-card"><div className="relative aspect-[16/10] overflow-hidden bg-muted"><img src={image} alt={alt} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /><span className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#101a39]/90 text-xs font-bold text-cyan-300">{step}</span></div><div className="p-6"><h3 className="text-lg font-bold tracking-[-0.02em]">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p></div></article>)}</div></div></section>
+      <section id="process" className="container py-20 sm:py-28">
+        <div className="overflow-hidden rounded-[44px] bg-[#0c1222] p-6 text-white shadow-[0_30px_100px_rgba(15,23,42,.22)] sm:p-10 lg:p-14">
+          <div className="grid gap-12 lg:grid-cols-[.82fr_1.18fr] lg:items-start">
+            <div>
+              <SectionLabel light>Process</SectionLabel>
+              <h2 className="text-4xl font-black tracking-[-0.055em] sm:text-6xl">A refined way to turn ideas into dependable software.</h2>
+              <p className="mt-6 leading-8 text-slate-300">The delivery process is simple on purpose: understand deeply, design carefully, build cleanly, improve continuously.</p>
+              <a href="#contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-black text-slate-950 transition hover:bg-cyan-100">
+                Plan my project <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
 
-      <section className="bg-muted/40"><div className="container py-24 sm:py-32"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Engagement models</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">Built around how you work<span className="text-primary">.</span></h2></div><p className="max-w-sm text-sm leading-6 text-muted-foreground">Choose the level of partnership that fits your goals today. Adjust as your needs evolve.</p></div><div className="mt-14 grid gap-5 lg:grid-cols-3">{models.map(({ name, description, best, icon: Icon, featured }) => <article key={name} className={`relative rounded-2xl border p-7 ${featured ? 'border-primary bg-primary text-primary-foreground shadow-2xl shadow-primary/20' : 'border-border bg-card'}`}><div className={`flex h-11 w-11 items-center justify-center rounded-xl ${featured ? 'bg-white/15' : 'bg-primary/10 text-primary'}`}><Icon className="h-5 w-5" /></div><h3 className="mt-7 text-xl font-bold">{name}</h3><p className={`mt-3 text-sm leading-6 ${featured ? 'text-primary-foreground/75' : 'text-muted-foreground'}`}>{description}</p><div className={`mt-8 border-t pt-5 text-xs font-semibold ${featured ? 'border-white/20 text-primary-foreground/75' : 'border-border text-muted-foreground'}`}>{best}</div>{featured && <span className="absolute right-6 top-6 rounded-full bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Most flexible</span>}</article>)}</div></div></section>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {process.map(({ icon: Icon, title, text }, index) => (
+                <div key={title} className="rounded-[30px] border border-white/10 bg-white/[0.07] p-7 backdrop-blur">
+                  <div className="flex items-center justify-between">
+                    <Icon className="h-7 w-7 text-cyan-200" />
+                    <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">0{index + 1}</span>
+                  </div>
+                  <h3 className="mt-8 text-2xl font-black tracking-[-0.04em]">{title}</h3>
+                  <p className="mt-4 leading-7 text-slate-300">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section id="about" className="container grid gap-14 py-24 sm:py-32 lg:grid-cols-[.75fr_1.25fr] lg:items-center"><div className="relative mx-auto w-full max-w-sm"><div className="absolute -inset-4 rounded-[28px] bg-primary/10 blur-2xl" /><div className="relative rounded-[24px] bg-gradient-to-br from-primary to-[#263f91] p-8 text-white shadow-2xl shadow-primary/20"><div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/15 text-2xl font-black">NS</div><p className="mt-24 text-2xl font-bold tracking-tight">Technology is better when it feels human.</p><div className="mt-7 flex items-center justify-between border-t border-white/20 pt-5 text-xs text-white/70"><span>NathSphere Technolabs</span><span>Since 2015</span></div></div></div><div><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">A little about us</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">Senior thinking. Genuine partnership.</h2><p className="mt-6 text-lg leading-8 text-muted-foreground">NathSphere Technolabs is led by a Lead Backend Engineer with 9+ years of experience building systems that businesses can depend on. We started with a simple belief: you shouldn&apos;t have to choose between moving fast and building well.</p><p className="mt-4 text-base leading-7 text-muted-foreground">Today, we help ambitious teams make confident technical decisions, deliver meaningful products, and create a foundation for sustainable growth.</p><a href="#contact" className="mt-8 inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-bold transition-colors hover:border-primary hover:text-primary">Start a conversation <ArrowRight className="h-4 w-4" /></a></div></section>
+      <section id="about" className="container grid gap-12 py-20 sm:py-28 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
+        <div className="relative order-2 lg:order-1">
+          <div className="absolute -inset-6 rounded-[44px] bg-gradient-to-br from-indigo-300/40 via-cyan-200/40 to-amber-200/40 blur-2xl" />
+          <div className="relative rounded-[40px] border border-white/70 bg-white/65 p-6 shadow-2xl shadow-slate-950/10 backdrop-blur-xl">
+            <div className="rounded-[32px] bg-gradient-to-br from-white to-indigo-50 p-7">
+              <img src="/logo.png" alt="NathSphere Technolabs logo" className="h-24 w-24 rounded-3xl bg-white object-contain p-2 shadow-sm" />
+              <p className="mt-14 text-3xl font-black leading-tight tracking-[-0.045em] text-slate-950">Elegant design is useful design. Cool visuals still need reliable software behind them.</p>
+              <div className="mt-8 grid grid-cols-2 gap-3">
+                {['Strategy', 'Design', 'Development', 'Support'].map((item) => <div key={item} className="rounded-2xl bg-white p-4 text-sm font-black text-slate-700 shadow-sm">{item}</div>)}
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <section className="border-y border-border bg-muted/30"><div className="container py-20"><div className="text-center"><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Where we help</p><h2 className="text-3xl font-bold tracking-[-0.03em] sm:text-4xl">Experience across industries</h2></div><div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">{industries.map(([name, Icon]) => <div key={name} className="flex flex-col items-center gap-3 rounded-2xl border border-border bg-card px-3 py-6 text-center transition-colors hover:border-primary/30"><Icon className="h-6 w-6 text-primary" /><span className="text-sm font-semibold">{name}</span></div>)}</div></div></section>
+        <div className="order-1 lg:order-2">
+          <SectionLabel>Why NathSphere</SectionLabel>
+          <h2 className="text-4xl font-black tracking-[-0.055em] text-slate-950 sm:text-6xl">A boutique software partner with senior engineering depth.</h2>
+          <p className="mt-6 text-lg leading-8 text-slate-600">We combine brand-level presentation with backend discipline, product thinking, automation, cloud readiness, and long-term support. The result: software that looks elevated and keeps working.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {['Premium responsive design', 'Scalable technical foundation', 'Clear service communication', 'Long-term product ownership'].map((item) => (
+              <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/70 bg-white/65 p-4 shadow-sm backdrop-blur-xl">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-indigo-600" />
+                <span className="font-bold text-slate-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <section id="projects" className="container py-24 sm:py-32"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Selected projects</p><h2 className="max-w-2xl text-4xl font-bold tracking-[-0.04em] sm:text-5xl">Practical software for real-world momentum<span className="text-primary">.</span></h2></div><p className="max-w-sm text-sm leading-6 text-muted-foreground">A glimpse of the product thinking and engineering craft we bring to every engagement.</p></div><div className="mt-14 grid gap-6 lg:grid-cols-3">{[
-        { title: 'NostroMarkets', category: 'Trading platform', description: 'A secure trading platform built for real-time market access, portfolio visibility, and confident decision-making across active financial workflows.', image: '/nostro.webp', alt: 'NostroMarkets trading platform interface' },
-        { title: 'Brilliant Chair', category: 'E-commerce website', description: 'A polished online furniture store designed to showcase products clearly, simplify browsing, and support a smooth path from discovery to purchase.', image: '/briliant.webp', alt: 'Brilliant Chair ecommerce website interface' },
-        { title: 'Operations Command Center', category: 'Custom platform development', description: 'A focused workspace for teams to see performance, spot risks, and act faster.', image: 'https://images.pexels.com/photos/34069/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940', alt: 'Analytics dashboard showing charts and performance data' },
-        { title: 'Fintech Insights Platform', category: 'Scalable system architecture', description: 'A dependable analytics foundation built to make complex financial data easier to use.', image: 'https://images.unsplash.com/photo-1587401511935-a7f87afadf2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHxmaW50ZWNoJTIwYW5hbHl0aWNzfGVufDB8fHxibHVlfDE3ODk1NDM5MzZ8MA&ixlib=rb-4.1.0&q=85', alt: 'Blue financial analytics interface with data visualizations' },
-        { title: 'Logistics Workflow Suite', category: 'Automation and integrations', description: 'Connected workflows that help operations teams keep every moving part on track.', image: 'https://images.unsplash.com/photo-1584472666879-7d92db132958?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwYW5hbHl0aWNzfGVufDB8fHxibHVlfDE3ODk1NDM5MzZ8MA&ixlib=rb-4.1.0&q=85', alt: 'Modern business dashboard with logistics and performance metrics' },
-      ].map((project) => <article key={project.title} className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"><div className="relative aspect-[16/10] overflow-hidden bg-muted"><img src={project.image} alt={project.alt} loading="lazy" className="h-full w-full bg-white object-contain p-3 transition duration-500 group-hover:scale-105" /><div className="absolute left-4 top-4 rounded-full border border-white/20 bg-[#101a39]/85 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-white">{project.category}</div></div><div className="p-6"><p className="text-xs font-bold uppercase tracking-[0.12em] text-primary">{project.category}</p><h3 className="mt-3 text-xl font-bold tracking-[-0.02em]">{project.title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{project.description}</p><a href="#contact" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary">Discuss a similar project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a></div></article>)}</div></section>
-      <section className="container py-24 sm:py-32"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Words from the journey</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">A partner you can count on<span className="text-primary">.</span></h2></div><span className="text-sm text-muted-foreground">What our clients will say next</span></div><div className="mt-14 grid gap-5 lg:grid-cols-3">{testimonials.map(({ quote, name, role }) => <article key={name} className="rounded-2xl border border-border bg-card p-7"><Quote className="h-7 w-7 text-primary/40" /><p className="mt-6 min-h-[112px] text-base leading-7 text-foreground/80">&quot;{quote}&quot;</p><div className="mt-6 border-t border-border pt-5"><p className="text-sm font-bold">{name}</p><p className="mt-1 text-xs text-muted-foreground">{role}</p></div></article>)}</div></section>
+      <section className="container py-16">
+        <div className="rounded-[36px] border border-white/70 bg-white/65 p-8 shadow-sm backdrop-blur-xl">
+          <div className="text-center">
+            <SectionLabel>Markets</SectionLabel>
+            <h2 className="text-3xl font-black tracking-[-0.045em] text-slate-950 sm:text-5xl">Elegant software for practical industries.</h2>
+          </div>
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {industries.map(([name, Icon]) => (
+              <div key={name} className="rounded-3xl bg-white/80 p-6 text-center transition-all hover:-translate-y-1 hover:bg-white hover:shadow-lg">
+                <Icon className="mx-auto h-7 w-7 text-indigo-600" />
+                <p className="mt-4 text-sm font-black text-slate-800">{name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <section id="faq" className="border-y border-border bg-muted/30"><div className="container grid gap-12 py-24 sm:py-32 lg:grid-cols-[.75fr_1.25fr]"><div><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Frequently asked</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">A few helpful answers<span className="text-primary">.</span></h2><p className="mt-5 max-w-sm text-base leading-7 text-muted-foreground">Still have a question? Send us a note and we&apos;ll give you a clear answer based on your project.</p><a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-primary">Ask us directly <ArrowRight className="h-4 w-4" /></a></div><div className="divide-y divide-border rounded-2xl border border-border bg-card px-6">{faqs.map(({ question, answer }, index) => <div key={question}><button type="button" className="flex w-full items-center justify-between gap-5 py-5 text-left text-sm font-bold" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{question}</span><ChevronDown className={`h-4 w-4 shrink-0 text-primary transition-transform ${openFaq === index ? 'rotate-180' : ''}`} /></button>{openFaq === index && <p className="-mt-1 pb-5 pr-8 text-sm leading-6 text-muted-foreground">{answer}</p>}</div>)}</div></div></section>
+      <section className="container py-20 sm:py-28">
+        <div className="grid gap-6 lg:grid-cols-[1fr_.85fr]">
+          <div className="rounded-[40px] bg-[#0c1222] p-8 text-white shadow-2xl shadow-slate-950/20 sm:p-12">
+            <SectionLabel light>Client feeling</SectionLabel>
+            <h2 className="text-4xl font-black tracking-[-0.055em] sm:text-6xl">Premium on the surface. Serious underneath.</h2>
+          </div>
+          <div className="rounded-[40px] border border-white/70 bg-white/65 p-8 shadow-sm backdrop-blur-xl sm:p-10">
+            <Quote className="h-9 w-9 text-indigo-500" />
+            <p className="mt-7 text-xl leading-8 text-slate-700">NathSphere gives businesses the calm, polished, and dependable technology presence they need to look credible and operate better.</p>
+            <p className="mt-7 text-sm font-black uppercase tracking-[0.18em] text-slate-400">Software service partner</p>
+          </div>
+        </div>
+      </section>
 
-      <section id="connect" className="container py-24 sm:py-32"><div className="text-center"><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">Let&apos;s connect</p><h2 className="text-4xl font-bold tracking-[-0.04em] sm:text-5xl">Choose the way that works for you<span className="text-primary">.</span></h2><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-muted-foreground">Whether you have a quick question or a bigger idea, we&apos;re happy to start with a thoughtful conversation.</p></div><div className="mx-auto mt-14 grid max-w-5xl gap-4 md:grid-cols-3"><a href="#contact" className="group rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"><span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><MessageSquare className="h-5 w-5" /></span><h3 className="mt-6 text-xl font-bold">Talk to us</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">Share what you&apos;re building and find the right next step with our engineering team.</p><span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary">Start a conversation <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span></a><a href="mailto:chavda2991sandeep@gmail.com" className="group rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"><span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><Mail className="h-5 w-5" /></span><h3 className="mt-6 text-xl font-bold">Write to us</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">Send a few details by email and we&apos;ll get back to you with a clear, useful response.</p><span className="mt-6 inline-flex items-center gap-2 break-all text-sm font-bold text-primary">chavda2991sandeep@gmail.com <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" /></span></a><a href="#contact" className="group rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"><span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><MapPin className="h-5 w-5" /></span><h3 className="mt-6 text-xl font-bold">Visit us</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">Planning an in-person conversation? Contact us first and we&apos;ll arrange a convenient meeting by appointment.</p><span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary">Arrange a meeting <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span></a></div></section>
+      <section id="faq" className="container py-20 sm:py-28">
+        <div className="grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
+          <div>
+            <SectionLabel>FAQ</SectionLabel>
+            <h2 className="text-4xl font-black tracking-[-0.055em] text-slate-950 sm:text-6xl">Before we create the next version.</h2>
+            <p className="mt-5 leading-8 text-slate-600">Useful answers for redesign, software service, and long-term product work.</p>
+          </div>
+          <div className="divide-y divide-slate-200 overflow-hidden rounded-[34px] border border-white/70 bg-white/65 shadow-sm backdrop-blur-xl">
+            {faqs.map(({ question, answer }, index) => (
+              <div key={question}>
+                <button type="button" className="flex w-full items-center justify-between gap-5 p-6 text-left text-lg font-black text-slate-950" onClick={() => setOpenFaq(openFaq === index ? -1 : index)}>
+                  {question}
+                  <ChevronDown className={`h-5 w-5 shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === index && <p className="px-6 pb-6 leading-7 text-slate-600">{answer}</p>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <section id="contact" className="container pb-24 sm:pb-32"><div className="overflow-hidden rounded-[28px] bg-[#101a39] text-white shadow-2xl shadow-primary/10"><div className="grid gap-12 p-7 sm:p-12 lg:grid-cols-[.85fr_1.15fr] lg:p-16"><div className="relative"><div className="absolute -left-28 -top-28 h-64 w-64 rounded-full bg-primary/30 blur-3xl" /><div className="relative"><p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">Let&apos;s build something dependable</p><h2 className="max-w-lg text-4xl font-bold leading-tight tracking-[-0.04em] sm:text-5xl">Let&apos;s discuss how we can support your team<span className="text-cyan-300">.</span></h2><p className="mt-6 max-w-md leading-7 text-slate-300">Tell us a little about where you are and where you want to go. We&apos;ll bring thoughtful questions and practical ideas to the conversation.</p><div className="mt-9 flex items-center gap-3 text-sm text-slate-300"><Mail className="h-4 w-4 text-cyan-300" /><a href="mailto:chavda2991sandeep@gmail.com" className="hover:text-white">chavda2991sandeep@gmail.com</a></div></div></div><form onSubmit={submitForm} className="relative rounded-2xl bg-white p-6 text-foreground sm:p-8"><div className="grid gap-5 sm:grid-cols-2"><label className="text-sm font-semibold">Your name<input required name="name" value={form.name} onChange={updateForm} className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm font-normal outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Alex Morgan" /></label><label className="text-sm font-semibold">Email address<input required type="email" name="email" value={form.email} onChange={updateForm} className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm font-normal outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="alex@company.com" /></label></div><label className="mt-5 block text-sm font-semibold">Company <span className="font-normal text-muted-foreground">(optional)</span><input name="company" value={form.company} onChange={updateForm} className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm font-normal outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Your company" /></label><label className="mt-5 block text-sm font-semibold">How can we help?<textarea required name="message" value={form.message} onChange={updateForm} rows={4} className="mt-2 w-full resize-none rounded-lg border border-border bg-background px-4 py-3 text-sm font-normal outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Tell us about your project or challenge..." /></label><button disabled={formState.status === 'loading'} type="submit" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 disabled:cursor-wait disabled:opacity-60">{formState.status === 'loading' ? 'Sending...' : 'Send enquiry'} {formState.status !== 'loading' && <Send className="h-4 w-4" />}</button>{formState.message && <p role="status" className={`mt-4 text-sm ${formState.status === 'success' ? 'text-emerald-600' : 'text-red-600'}`}>{formState.message}</p>}</form></div></div></section>
+      <section id="contact" className="container py-20 sm:py-28">
+        <div className="overflow-hidden rounded-[44px] bg-[#0c1222] text-white shadow-[0_30px_100px_rgba(15,23,42,.24)]">
+          <div className="grid gap-10 p-7 sm:p-12 lg:grid-cols-[.88fr_1.12fr] lg:p-16">
+            <div>
+              <SectionLabel light>Start beautifully</SectionLabel>
+              <h2 className="text-4xl font-black leading-tight tracking-[-0.055em] sm:text-6xl">Want this elegant cool direction for your software service website?</h2>
+              <p className="mt-6 leading-8 text-slate-300">Tell us what you want to redesign, build, automate, or scale. We will respond with a clear next step.</p>
+              <div className="mt-8 space-y-4 text-sm text-slate-300">
+                <a href="mailto:chavda2991sandeep@gmail.com" className="flex items-center gap-3 transition-colors hover:text-white"><Mail className="h-5 w-5 text-cyan-200" /> chavda2991sandeep@gmail.com</a>
+                <div className="flex items-center gap-3"><UsersRound className="h-5 w-5 text-cyan-200" /> Dedicated software service team</div>
+                <div className="flex items-center gap-3"><Cpu className="h-5 w-5 text-cyan-200" /> Websites, software, APIs, cloud, AI</div>
+              </div>
+            </div>
 
-      <footer className="border-t border-border"><div className="container flex flex-col gap-8 py-10 sm:flex-row sm:items-center sm:justify-between"><div><a href="#top" className="flex items-center gap-3"><img src="/logo.png" alt="NathSphere Technolabs logo" className="h-16 w-16 rounded-2xl object-contain" /></a><p className="mt-3 text-sm text-muted-foreground">Engineering reliable software for what&apos;s next.</p></div><div className="flex items-center gap-5 text-sm text-muted-foreground"><a href="mailto:chavda2991sandeep@gmail.com" className="transition-colors hover:text-foreground" aria-label="Email NathSphere"><Mail className="h-4 w-4" /></a><a href="#contact" className="transition-colors hover:text-foreground" aria-label="Contact NathSphere"><MessageSquare className="h-4 w-4" /></a><a href="#top" className="transition-colors hover:text-foreground" aria-label="Back to top"><ArrowRight className="h-4 w-4 -rotate-90" /></a></div><p className="text-xs text-muted-foreground sm:text-right">© {new Date().getFullYear()} NathSphere Technolabs. All rights reserved.</p></div></footer>
+            <form onSubmit={submitForm} className="rounded-[34px] border border-white/10 bg-white p-5 text-slate-950 shadow-2xl sm:p-7">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="text-sm font-bold text-slate-700">Name<input name="name" value={form.name} onChange={updateForm} required className="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-indigo-400 focus:bg-white" placeholder="Your name" /></label>
+                <label className="text-sm font-bold text-slate-700">Email<input name="email" type="email" value={form.email} onChange={updateForm} required className="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-indigo-400 focus:bg-white" placeholder="you@company.com" /></label>
+              </div>
+              <label className="mt-4 block text-sm font-bold text-slate-700">Company<input name="company" value={form.company} onChange={updateForm} className="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-indigo-400 focus:bg-white" placeholder="Company name" /></label>
+              <label className="mt-4 block text-sm font-bold text-slate-700">Project details<textarea name="message" value={form.message} onChange={updateForm} required rows={5} className="mt-2 w-full resize-none rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-indigo-400 focus:bg-white" placeholder="Tell us about the website, software, or workflow you need." /></label>
+              <button type="submit" disabled={formState.status === 'loading'} className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-4 text-sm font-black text-white transition-all hover:-translate-y-0.5 hover:bg-indigo-600 disabled:cursor-not-allowed disabled:opacity-70">
+                {formState.status === 'loading' ? 'Sending...' : 'Send project request'} <Send className="h-4 w-4" />
+              </button>
+              {formState.message && <p className={`mt-4 rounded-2xl px-4 py-3 text-sm font-bold ${formState.status === 'success' ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'}`}>{formState.message}</p>}
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/70 bg-white/50 backdrop-blur-xl">
+        <div className="container flex flex-col gap-8 py-10 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <a href="#top" className="flex items-center gap-3">
+              <img src="/logo.png" alt="NathSphere Technolabs logo" className="h-12 w-12 rounded-full bg-white object-contain p-1" />
+              <span className="font-black text-slate-950">NathSphere Technolabs</span>
+            </a>
+            <p className="mt-3 text-sm text-slate-500">Elegant software services for modern digital products.</p>
+          </div>
+          <div className="flex items-center gap-5 text-sm text-slate-500">
+            <a href="mailto:chavda2991sandeep@gmail.com" className="transition-colors hover:text-slate-950" aria-label="Email NathSphere"><Mail className="h-5 w-5" /></a>
+            <a href="#contact" className="transition-colors hover:text-slate-950" aria-label="Contact NathSphere"><MessageSquare className="h-5 w-5" /></a>
+            <a href="https://www.linkedin.com" className="transition-colors hover:text-slate-950" aria-label="LinkedIn"><Linkedin className="h-5 w-5" /></a>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
