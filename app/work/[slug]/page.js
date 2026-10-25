@@ -57,8 +57,20 @@ export default async function ProjectDetailPage({ params }) {
       </section>
 
       <section className="container grid gap-6 px-4 py-20 sm:px-8 sm:py-28 lg:grid-cols-[.8fr_1.2fr]">
-        <div className="rounded-[34px] bg-[#0c1222] p-8 text-white shadow-2xl shadow-slate-950/15 sm:p-10"><p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-200">What it solves</p><h2 className="mt-6 text-4xl font-black leading-tight tracking-[-0.055em]">Useful software for a real operating problem.</h2><p className="mt-6 leading-7 text-slate-300">{project.outcome}</p></div>
-        <div className="rounded-[34px] border border-white/80 bg-white/65 p-8 shadow-sm backdrop-blur-xl sm:p-10"><p className="text-xs font-black uppercase tracking-[0.22em] text-indigo-600">Core capabilities</p><h2 className="mt-5 text-3xl font-black tracking-[-0.05em] text-slate-950">Designed around the work that matters.</h2><div className="mt-8 grid gap-4 sm:grid-cols-2">{project.capabilities.map((capability) => <div key={capability} className="flex items-start gap-3 rounded-2xl bg-white/80 p-4 text-sm font-bold text-slate-700"><Check className="mt-0.5 h-5 w-5 shrink-0 text-indigo-600" />{capability}</div>)}</div></div>
+        <div className="rounded-[34px] bg-[#0c1222] p-8 text-white shadow-2xl shadow-slate-950/15 sm:p-10"><p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-200">What {project.title} solves</p><h2 className="mt-6 text-4xl font-black leading-tight tracking-[-0.055em]">{project.title}: useful software for a real operating problem.</h2><p className="mt-6 leading-7 text-slate-300">{project.outcome}</p></div>
+        <div className="rounded-[34px] border border-white/80 bg-white/65 p-8 shadow-sm backdrop-blur-xl sm:p-10"><p className="text-xs font-black uppercase tracking-[0.22em] text-indigo-600">{project.title} capabilities</p><h2 className="mt-5 text-3xl font-black tracking-[-0.05em] text-slate-950">Designed around the work that matters.</h2><div className="mt-8 grid gap-4 sm:grid-cols-2">{project.capabilities.map((capability) => <div key={capability} className="flex items-start gap-3 rounded-2xl bg-white/80 p-4 text-sm font-bold text-slate-700"><Check className="mt-0.5 h-5 w-5 shrink-0 text-indigo-600" />{capability}</div>)}</div></div>
+      </section>
+      <section className="container grid gap-6 px-4 pb-20 sm:px-8 sm:pb-28 md:grid-cols-2">
+        <article className="rounded-[34px] border border-white/80 bg-white/65 p-8 shadow-sm backdrop-blur-xl sm:p-10">
+          <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-400">The challenge</p>
+          <h2 className="mt-5 text-3xl font-black tracking-[-0.05em] text-slate-950">Why {project.title} matters.</h2>
+          <p className="mt-5 leading-8 text-slate-600">{project.challenge}</p>
+        </article>
+        <article className="rounded-[34px] border border-white/80 bg-white/65 p-8 shadow-sm backdrop-blur-xl sm:p-10">
+          <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-400">The approach</p>
+          <h2 className="mt-5 text-3xl font-black tracking-[-0.05em] text-slate-950">How {project.title} works.</h2>
+          <p className="mt-5 leading-8 text-slate-600">{project.solution}</p>
+        </article>
       </section>
 
       <section className="container px-4 pb-24 sm:px-8 sm:pb-32"><div className="flex flex-col items-start justify-between gap-6 rounded-[36px] border border-white/80 bg-white/65 p-8 shadow-sm backdrop-blur-xl sm:flex-row sm:items-center sm:p-10"><div><p className="text-xs font-black uppercase tracking-[0.22em] text-slate-400">Next step</p><h2 className="mt-3 text-3xl font-black tracking-[-0.05em] text-slate-950">Have a similar challenge?</h2></div><div className="flex flex-wrap gap-3"><Link href="/#contact" className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 text-sm font-black text-white transition hover:bg-indigo-600">Start a conversation <ArrowRight className="h-4 w-4" /></Link><Link href="/#work" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm font-black text-slate-800 transition hover:bg-slate-50">Explore more work <ExternalLink className="h-4 w-4" /></Link></div></div></section>
