@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">PharmaFlow smart pharmacy management dashboard</title>
+  <desc id="desc">A pharmacy dashboard showing billing, inventory, stock analytics, and expiry tracking.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#effbff"/><stop offset="1" stop-color="#d9f4fb"/></linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11b8b5"/><stop offset="1" stop-color="#0c969f"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#4194a5" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1600" height="1100" rx="46" fill="url(#bg)"/>
+  <g fill="#fff" opacity=".72"><circle cx="130" cy="118" r="5"/><circle cx="1460" cy="142" r="7"/><circle cx="240" cy="960" r="5"/><circle cx="1350" cy="890" r="5"/></g>
+  <g filter="url(#shadow)">
+    <rect x="340" y="105" width="920" height="800" rx="32" fill="#fff"/>
+    <rect x="340" y="105" width="920" height="800" rx="32" fill="none" stroke="#d9e6e9" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#132330">
+    <rect x="380" y="145" width="30" height="38" rx="7" fill="url(#teal)"/><rect x="383" y="137" width="24" height="10" rx="4" fill="#0d9d9f"/>
+    <text x="430" y="171" font-size="27" font-weight="700">PharmaFlow</text>
+    <circle cx="1152" cy="163" r="21" fill="#e7f2f4"/><text x="1142" y="169" font-size="12" font-weight="700">JD</text><text x="1200" y="171" font-size="25">♧</text>
+    <line x1="380" y1="210" x2="1220" y2="210" stroke="#edf2f3" stroke-width="2"/>
+    <rect x="380" y="240" width="150" height="42" rx="12" fill="#d6f5f2"/><text x="415" y="267" font-size="15" font-weight="700">▣  Inventory</text>
+    <g font-size="15"><text x="405" y="325">▧  Dashboard</text><text x="405" y="385">▤  Suppliers</text><text x="405" y="445">▽  Orders</text><text x="405" y="505">▥  Analytics</text><text x="405" y="565">⚙  Settings</text></g>
+    <g transform="translate(575 240)"><rect width="190" height="105" rx="16" fill="#fbfdfd" stroke="#edf2f3"/><text x="20" y="30" font-size="14">Total SKUs</text><text x="20" y="73" font-size="35" font-weight="700">12,450</text><text x="145" y="70" font-size="24" fill="#16a989">↑</text></g>
+    <g transform="translate(785 240)"><rect width="190" height="105" rx="16" fill="#fbfdfd" stroke="#edf2f3"/><text x="20" y="30" font-size="14">Low Stock Items</text><text x="20" y="73" font-size="35" font-weight="700" fill="#e89b16">42</text></g>
+    <g transform="translate(995 240)"><rect width="190" height="105" rx="16" fill="#fbfdfd" stroke="#edf2f3"/><text x="20" y="30" font-size="14">Expiring Soon</text><text x="20" y="73" font-size="35" font-weight="700" fill="#e9534f">18</text></g>
+    <text x="575" y="400" font-size="18" font-weight="700">Stock Analytics</text>
+    <line x1="590" y1="575" x2="1170" y2="575" stroke="#dce8e9"/><g fill="#21b8ba"><rect x="620" y="490" width="23" height="85" rx="9"/><rect x="760" y="450" width="23" height="125" rx="9"/><rect x="900" y="430" width="23" height="145" rx="9"/><rect x="1040" y="420" width="23" height="155" rx="9"/></g><g fill="#a9e6df"><rect x="650" y="465" width="23" height="110" rx="9"/><rect x="790" y="420" width="23" height="155" rx="9"/><rect x="930" y="400" width="23" height="175" rx="9"/><rect x="1070" y="440" width="23" height="135" rx="9"/></g><g font-size="13" fill="#7c8b91"><text x="625" y="605">Jan</text><text x="765" y="605">Feb</text><text x="905" y="605">Mar</text><text x="1045" y="605">Apr</text></g>
+    <g font-size="15" font-weight="700"><text x="575" y="655">▤  Amoxicillin 500mg</text><text x="575" y="705">▤  Ibuprofen 200mg</text><text x="575" y="755">▤  Cetirizine 10mg</text></g><g font-size="13"><rect x="1080" y="636" width="90" height="28" rx="14" fill="#d7f5e8"/><text x="1095" y="655" fill="#16875f">In Stock</text><rect x="1080" y="686" width="90" height="28" rx="14" fill="#fff0c9"/><text x="1095" y="705" fill="#bb7900">Low Stock</text><rect x="1080" y="736" width="90" height="28" rx="14" fill="#ffe0de"/><text x="1100" y="755" fill="#d64942">Expiring</text></g>
+    <g filter="url(#shadow)"><rect x="70" y="190" width="230" height="170" rx="22" fill="#fff"/><text x="100" y="235" font-size="16" font-weight="700">Scan &amp; Update</text><rect x="100" y="260" width="78" height="55" fill="none" stroke="#18aaa9" stroke-width="4" stroke-dasharray="5 4"/><text x="100" y="340" font-size="13">Item: Omeprazole</text><text x="100" y="358" font-size="13" fill="#16875f">Status: Verified</text></g>
+    <g filter="url(#shadow)"><rect x="1295" y="205" width="245" height="170" rx="22" fill="#fff"/><text x="1330" y="250" font-size="16" font-weight="700">Expiry Tracking</text><circle cx="1335" cy="300" r="25" fill="none" stroke="#20a5aa" stroke-width="4"/><path d="M1335 300v-16m0 16 12 8" stroke="#20a5aa" stroke-width="4"/><text x="1380" y="300" font-size="13">Lisinopril 10mg</text><text x="1380" y="325" font-size="13">Expires: 2024-11-15</text></g>
+  </g>
+</svg>

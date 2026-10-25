@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   ArrowRight,
@@ -25,6 +26,7 @@ import {
   X,
   Zap,
 } from 'lucide-react'
+import { projects } from '../lib/projects'
 
 const navItems = [
   ['Services', '#services'],
@@ -32,6 +34,7 @@ const navItems = [
   ['Process', '#process'],
   ['About', '#about'],
   ['FAQ', '#faq'],
+  ['Blogs', '/blog'],
 ]
 
 const services = [
@@ -57,11 +60,6 @@ const process = [
   { icon: Zap, title: 'Evolve', text: 'We launch, monitor, improve, and support the product so it keeps feeling reliable as your business grows.' },
 ]
 
-const work = [
-  { title: 'NostroMarkets', type: 'Trading platform', image: '/nostro.webp', text: 'A refined trading experience with real-time visibility, clear portfolio workflows, and secure product foundations.' },
-  { title: 'Brilliant Chair', type: 'E-commerce website', image: '/briliant.webp', text: 'A polished storefront that presents products beautifully and gives shoppers a smoother path from browse to purchase.' },
-  { title: 'Operations command center', type: 'Custom platform', image: 'https://images.pexels.com/photos/34069/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940', text: 'A business dashboard concept for seeing performance, spotting risks, and taking action from one elegant workspace.' },
-]
 
 const industries = [
   ['SaaS', BarChart3],
@@ -273,8 +271,8 @@ function App() {
           </div>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
-            {work.map((project) => (
-              <article key={project.title} className="group overflow-hidden rounded-[38px] border border-white/70 bg-white/65 p-3 shadow-sm backdrop-blur-xl transition-all hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-slate-950/10">
+            {projects.map((project) => (
+              <Link key={project.title} href={`/work/${project.slug}`} className="group block overflow-hidden rounded-[38px] border border-white/70 bg-white/65 p-3 shadow-sm backdrop-blur-xl transition-all hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-slate-950/10">
                 <div className="relative aspect-[16/11] overflow-hidden rounded-[30px] bg-slate-100">
                   <img src={project.image} alt={`${project.title} project preview`} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                   <span className="absolute left-5 top-5 rounded-full border border-white/30 bg-white/80 px-3 py-1.5 text-xs font-black uppercase tracking-[0.14em] text-slate-900 backdrop-blur">{project.type}</span>
@@ -282,8 +280,9 @@ function App() {
                 <div className="p-5">
                   <h3 className="text-2xl font-black tracking-[-0.04em] text-slate-950">{project.title}</h3>
                   <p className="mt-4 leading-7 text-slate-600">{project.text}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-indigo-600">View project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
