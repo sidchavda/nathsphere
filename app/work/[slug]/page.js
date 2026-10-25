@@ -11,7 +11,11 @@ export async function generateMetadata({ params }) {
   const { slug } = await params
   const project = getProject(slug)
   return project
-    ? { title: `${project.title} | NathSphere Technolabs`, description: project.text }
+    ? {
+        title: `${project.title} | NathSphere Technolabs`,
+        description: project.description,
+        openGraph: { title: `${project.title} | NathSphere Technolabs`, description: project.description, images: [project.image] },
+      }
     : { title: 'Project not found | NathSphere Technolabs' }
 }
 

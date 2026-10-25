@@ -1,9 +1,33 @@
 import { NextResponse } from 'next/server'
 import { MongoClient } from 'mongodb'
+import nodemailer from 'nodemailer'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 
+const contactRecipient = 'nathsphere19@gmail.com'
 let cachedClient
+let cachedTransporter
+
+function getTransporter() {
+  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    throw new Error('SMTP_HOST, SMTP_USER, and SMTP_PASS must be configured')
+  }
+
+  if (!cachedTransporter) {
+    cachedTransporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: process.env.SMTP_SECURE === 'true',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    })
+  }
+
+  return cachedTransporter
+}
+
 
 async function getDatabase() {
   if (!process.env.MONGO_URL) {
@@ -93,6 +117,21 @@ export async function POST(request, { params }) {
       createdAt: new Date(),
       source: 'website-contact-form',
     })
+    await getTransporter().sendMail({
+      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+      to: contactRecipient,
+      replyTo: email,
+      subject: `New project enquiry from ${name}`,
+      text: [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Company: ${company || 'Not provided'}`,
+        '',
+        'Project details:',
+        message,
+      ].join('\n'),
+    })
+
 
     return json({ ok: true, message: 'Thanks — we will be in touch shortly.' }, 201)
   } catch (error) {

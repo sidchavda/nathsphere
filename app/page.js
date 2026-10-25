@@ -14,9 +14,11 @@ import {
   Layers3,
   Linkedin,
   Mail,
+  MapPin,
   Menu,
   MessageSquare,
   Network,
+  Phone,
   Quote,
   Send,
   ShieldCheck,
@@ -405,7 +407,9 @@ function App() {
               <h2 className="text-4xl font-black leading-tight tracking-[-0.055em] sm:text-6xl">Want this elegant cool direction for your software service website?</h2>
               <p className="mt-6 leading-8 text-slate-300">Tell us what you want to redesign, build, automate, or scale. We will respond with a clear next step.</p>
               <div className="mt-8 space-y-4 text-sm text-slate-300">
-                <a href="mailto:chavda2991sandeep@gmail.com" className="flex items-center gap-3 transition-colors hover:text-white"><Mail className="h-5 w-5 text-cyan-200" /> chavda2991sandeep@gmail.com</a>
+                <a href="mailto:nathsphere19@gmail.com" className="flex items-center gap-3 transition-colors hover:text-white"><Mail className="h-5 w-5 text-cyan-200" /> nathsphere19@gmail.com</a>
+                <a href="tel:9428158729" className="flex items-center gap-3 transition-colors hover:text-white"><Phone className="h-5 w-5 text-cyan-200" /> 9428158729</a>
+                <div className="flex items-start gap-3"><MapPin className="mt-0.5 h-5 w-5 shrink-0 text-cyan-200" /> Shyamal Infinity 304, JK Chock, Rajkot</div>
                 <div className="flex items-center gap-3"><UsersRound className="h-5 w-5 text-cyan-200" /> Dedicated software service team</div>
                 <div className="flex items-center gap-3"><Cpu className="h-5 w-5 text-cyan-200" /> Websites, software, APIs, cloud, AI</div>
               </div>
@@ -437,7 +441,7 @@ function App() {
             <p className="mt-3 text-sm text-slate-500">Elegant software services for modern digital products.</p>
           </div>
           <div className="flex items-center gap-5 text-sm text-slate-500">
-            <a href="mailto:chavda2991sandeep@gmail.com" className="transition-colors hover:text-slate-950" aria-label="Email NathSphere"><Mail className="h-5 w-5" /></a>
+            <a href="mailto:nathsphere19@gmail.com" className="transition-colors hover:text-slate-950" aria-label="Email NathSphere"><Mail className="h-5 w-5" /></a>
             <a href="#contact" className="transition-colors hover:text-slate-950" aria-label="Contact NathSphere"><MessageSquare className="h-5 w-5" /></a>
             <a href="https://www.linkedin.com" className="transition-colors hover:text-slate-950" aria-label="LinkedIn"><Linkedin className="h-5 w-5" /></a>
           </div>
