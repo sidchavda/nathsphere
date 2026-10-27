@@ -2,8 +2,8 @@ import './globals.css'
 
 export const metadata = {
   title: 'NathSphere Technolabs | Software Services, Websites & Scalable Platforms',
-  description: 'NathSphere Technolabs designs, develops, launches, and supports impressive websites, custom software, APIs, dashboards, AI workflows, and scalable digital platforms.',
-  keywords: ['software services', 'website development', 'custom software development', 'Next.js development', 'AI automation', 'NathSphere Technolabs'],
+  description: 'NathSphere Technolabs designs, develops, markets, and supports impressive websites, custom software, APIs, dashboards, AI workflows, digital marketing, SEO, and scalable digital platforms.',
+  keywords: ['software services', 'website development', 'custom software development', 'Next.js development', 'AI automation', 'digital marketing', 'SEO services', 'NathSphere Technolabs'],
   authors: [{ name: 'NathSphere Technolabs' }],
   openGraph: {
     title: 'NathSphere Technolabs | Software Services, Websites & Scalable Platforms',

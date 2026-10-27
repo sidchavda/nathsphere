@@ -15,6 +15,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  Megaphone,
   Menu,
   MessageSquare,
   Network,
@@ -45,6 +46,7 @@ const services = [
   { icon: Network, title: 'Backend, APIs & integrations', text: 'Secure services, clean APIs, data flows, payments, third-party integrations, and automation that stay dependable.', tags: ['APIs', 'Data', 'Automation'] },
   { icon: Gauge, title: 'Cloud, DevOps & performance', text: 'Deployment, monitoring, scaling, and optimization so your product feels fast and stable under real usage.', tags: ['Cloud', 'CI/CD', 'Performance'] },
   { icon: Sparkles, title: 'AI agents & smart workflows', text: 'Practical AI assistants and workflow systems that help teams move faster without adding operational noise.', tags: ['AI agents', 'Chatbots', 'RAG'] },
+  { icon: Megaphone, title: 'Digital marketing & SEO', text: 'Search-ready content, technical SEO, campaign strategy, and measurable growth systems that help the right customers find your business.', tags: ['SEO', 'Content', 'Growth'] },
   { icon: ShieldCheck, title: 'Maintenance & support', text: 'Long-term technical care for updates, fixes, security, uptime, feature growth, and platform health.', tags: ['Support', 'Security', 'Reliability'] },
 ]
 
