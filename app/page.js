@@ -405,7 +405,7 @@ function App() {
         <div className="overflow-hidden rounded-[44px] bg-[#0c1222] text-white shadow-[0_30px_100px_rgba(15,23,42,.24)]">
           <div className="grid gap-10 p-7 sm:p-12 lg:grid-cols-[.88fr_1.12fr] lg:p-16">
             <div>
-              <SectionLabel light>Start beautifully</SectionLabel>
+              <SectionLabel light>Start beautifully.</SectionLabel>
               <h2 className="text-4xl font-black leading-tight tracking-[-0.055em] sm:text-6xl">Want this elegant cool direction for your software service website?</h2>
               <p className="mt-6 leading-8 text-slate-300">Tell us what you want to redesign, build, automate, or scale. We will respond with a clear next step.</p>
               <div className="mt-8 space-y-4 text-sm text-slate-300">
