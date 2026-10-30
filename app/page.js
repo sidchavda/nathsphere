@@ -99,6 +99,14 @@ function App() {
   const [openFaq, setOpenFaq] = useState(0)
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' })
   const [formState, setFormState] = useState({ status: 'idle', message: '' })
+  const [pointer, setPointer] = useState({ x: 50, y: 25 })
+
+  const handlePointerMove = (event) => {
+    setPointer({
+      x: (event.clientX / window.innerWidth) * 100,
+      y: (event.clientY / window.innerHeight) * 100,
+    })
+  }
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -127,7 +135,8 @@ function App() {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f4f1ea] text-[#111827]">
+    <main className="relative min-h-screen overflow-hidden bg-[#f4f1ea] text-[#111827]" onPointerMove={handlePointerMove}>
+      <div aria-hidden="true" className="pointer-events-none fixed z-0 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300/20 blur-3xl transition-[left,top] duration-300 ease-out" style={{ left: `${pointer.x}%`, top: `${pointer.y}%` }} />
       <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3">
         <div className="container flex h-16 items-center justify-between rounded-full border border-white/70 bg-white/70 px-4 shadow-[0_18px_60px_rgba(15,23,42,.10)] backdrop-blur-2xl">
           <a href="#top" className="flex items-center gap-3" onClick={closeMenu} aria-label="NathSphere Technolabs home">
